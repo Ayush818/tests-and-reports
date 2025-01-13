@@ -1,0 +1,25 @@
+{
+  "name": "mobile_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "np",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@wdio/appium-service": "^9.5.7",
+    "@wdio/cli": "^9.5.7"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^9.5.7",
+    "@wdio/mocha-framework": "^9.5.0",
+    "@wdio/spec-reporter": "^9.5.0",
+    "appium": "^2.15.0",
+    "appium-uiautomator2-driver": "^3.9.8"
+  }
+}
