@@ -11,7 +11,7 @@ export let options = {
 };
 
 export default function () {
-  const url = "http://127.0.0.1:5001/client_login";
+  const url = "http://127.0.0.1:5000/client_login";
 
   const payload = {
     email: "test_1@example.com",

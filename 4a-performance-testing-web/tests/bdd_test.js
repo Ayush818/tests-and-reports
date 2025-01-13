@@ -8,7 +8,7 @@ export let options = {
 
 export default function () {
   group("Client Registration", function () {
-    const url = "http://127.0.0.1:5001/client_registeration";
+    const url = "http://127.0.0.1:5000/client_registeration";
 
     const payload = {
       fullName: `BDD Test User ${__VU}-${__ITER}`,
@@ -34,7 +34,7 @@ export default function () {
   });
 
   group("Client Login", function () {
-    const url = "http://127.0.0.1:5001/client_login";
+    const url = "http://127.0.0.1:5000/client_login";
 
     const payload = {
       email: `user_1@example.com`,
