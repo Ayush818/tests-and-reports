@@ -62,21 +62,21 @@ python3 Soar_Test/task.py
 #### Load Testing `/client_register`
 
 ```bash
-k6 run tests/load_client_register.js --out json=load_test_results.json
+k6 run tests/load_client_register.js --out json=results/load_test_results.json
 
 ```
 
 #### Stress Testing `/client_login`
 
 ```bash
-k6 run tests/stress_client_login.js --out json=stress_test_results.json
+k6 run tests/stress_client_login.js --out json=results/stress_test_results.json
 
 ```
 
 #### BDD Load Testing (for both `/client_register` and `/client_login`)
 
 ```bash
-k6 run tests/bdd_test.js --out json=bdd_test_results.json
+k6 run tests/bdd_test.js --out json=results/bdd_test_results.json
 ```
 
 ### Exporting Results
