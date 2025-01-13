@@ -38,7 +38,6 @@ export class AddProductToCart {
           const initialCount = parseInt(initialText, 10);
           cy.log(`Initial basket count: ${initialCount}`);
 
-          // Add a random product to the basket
           cy.get(this.productPageLocators.homePage).click({
             force: true,
           });
@@ -55,11 +54,9 @@ export class AddProductToCart {
             });
           });
 
-          // Verify the item was added
           cy.get(this.productPageLocators.snackBar).should("be.visible");
 
-          // Assert basket count increased
-          cy.wait(2000); // Ensure the update is reflected
+          cy.wait(2000);
           cy.get(this.productPageLocators.yourBasket)
             .invoke("text")
             .then((updatedText) => {
@@ -210,15 +207,15 @@ export class AddProductToCart {
             .parents(".mat-form-field-infix")
             .find("input")
             .type("3529999999999999");
-          cy.contains("mat-label", "Expiry Month") // Find the label "Expiry Month"
-            .parents(".mat-form-field-infix") // Navigate to the parent containing the dropdown
-            .find("select") // Locate the <select> element inside
-            .select("6"); // Select the value '6'
+          cy.contains("mat-label", "Expiry Month")
+            .parents(".mat-form-field-infix")
+            .find("select")
+            .select("6");
           cy.contains("mat-label", "Expiry Year")
             .parents(".mat-form-field-infix")
             .find("select")
-            .select("2085") // Select the desired year (e.g., 2085)
-            .should("have.value", "2085"); // Assert the selected value
+            .select("2085")
+            .should("have.value", "2085");
           cy.get(this.productPageLocators.submitButton).eq(0).click({});
         }
       });

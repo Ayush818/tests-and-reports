@@ -22,11 +22,11 @@ describe("Website Login and Shopping Cart Automation", () => {
     cy.visit(baseUrl);
     addProductToCart.selectRandomProduct();
   });
-  it("should be able to modify product quantity and validated total price", () => {
+  it("should be able to modify random product quantity and validate total price", () => {
     cy.visit(baseUrl + "basket");
     addProductToCart.updateProductQuantity();
   });
-  it("should check out the product from the cart", () => {
+  it("should checkout the product from the cart", () => {
     cy.visit(baseUrl + "basket");
     addProductToCart.checkOutProduct();
   });

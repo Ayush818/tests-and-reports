@@ -7,7 +7,7 @@ describe("Product Interaction Test - Apple Juice", () => {
   beforeEach(() => {
     cy.clearLocalStorageAndVisitUrl(baseUrl);
   });
-  it("should click on Apple", () => {
+  it("should click on Apple and validate image is of same product", () => {
     cy.contains(productPageLocators.appleJuice).click();
     cy.get(productPageLocators.productPopupModal).should("be.visible");
     cy.get(productPageLocators.productImage)
